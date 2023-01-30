@@ -1,16 +1,13 @@
-export function getValueByKeys(
-    entity,
-    path,
-  ) {
-    let current = entity;
-  
-    for (let i = 0; i < path.length; i += 1) {
-      if (current === null || current === undefined) {
-        return undefined;
-      }
-  
-      current = current[path[i]];
+export function getValueByKeys(entity, path) {
+  let current = entity;
+
+  for (let i = 0; i < path.length; i += 1) {
+    if (current === null || current === undefined) {
+      return undefined;
     }
-  
-    return current;
+
+    current = current[path[i]];
   }
+
+  return current;
+}

@@ -1,33 +1,30 @@
-import React from 'react'
-import { getValueByKeys } from '../utils/getValueByKeys'
-import './style.css'
+import React from "react";
+import { getValueByKeys } from "../utils/getValueByKeys";
+import "./style.css";
 
-const Table = ({
-    columns = [],
-    dataSource = []
-}) => {
+const Table = ({ columns = [], dataSource = [] }) => {
   return (
     <table>
       <thead>
-          <tr>
-            {columns.map(column => (
-              <th key={column.key}>{column.title}</th>
+        <tr>
+          {columns.map((column) => (
+            <th key={column.key}>{column.title}</th>
+          ))}
+        </tr>
+      </thead>
+      <tbody>
+        {dataSource.map((data, index) => (
+          <tr key={index}>
+            {columns.map((dataColumn) => (
+              <td data-column={dataColumn.title} key={dataColumn.key}>
+                {getValueByKeys(data, dataColumn.dataIndex)}
+              </td>
             ))}
           </tr>
-        </thead>
-        <tbody>
-          {dataSource.map((data, index) => (
-            <tr key={index}>
-              {columns.map(dataColumn => (
-                <td data-column={dataColumn.title} key={dataColumn.key}>
-                  {getValueByKeys(data, dataColumn.dataIndex)}
-                </td>
-              ))}
-            </tr>
-          ))}
-        </tbody>
+        ))}
+      </tbody>
     </table>
-  )
-}
+  );
+};
 
-export default React.memo(Table)
+export default React.memo(Table);

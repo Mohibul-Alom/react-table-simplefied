@@ -31,8 +31,8 @@ function App() {
       name: "John 1",
       age: 30,
       contact: {
-        email: 'example1@example.com',
-        phoneNumber: '123 456 789'
+        email: "example1@example.com",
+        phoneNumber: "123 456 789",
       },
       address: "New York No. 1 Lake Park",
     },
@@ -41,8 +41,8 @@ function App() {
       name: "John 2",
       age: 31,
       contact: {
-        email: 'example2@example.com',
-        phoneNumber: '123 456 789'
+        email: "example2@example.com",
+        phoneNumber: "123 456 789",
       },
       address: "New York No. 2 Lake Park",
     },
@@ -51,11 +51,11 @@ function App() {
       name: "John 3",
       age: 32,
       contact: {
-        email: 'example3@example.com',
-        phoneNumber: '123 456 789'
+        email: "example3@example.com",
+        phoneNumber: "123 456 789",
       },
       address: "New York No. 3 Lake Park",
-    }
+    },
   ];
 
   return (
